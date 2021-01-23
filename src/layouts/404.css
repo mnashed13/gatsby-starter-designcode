@@ -1,0 +1,27 @@
+.PageBg {
+display: flex;
+    height: 1080px;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(354.12deg, #012343 10%, #000000 100%);
+    /* z-index: inherit; */
+    align-items: center;
+    justify-content: center;
+    column-count: 1;
+}
+
+.PageBg h1{
+
+    font-weight: 700;
+    color:white;
+    
+}
+
+.PageBg p{
+    padding-top: 16px;
+    color:whitesmoke;
+    font-size:15px;
+
+
+    
+}

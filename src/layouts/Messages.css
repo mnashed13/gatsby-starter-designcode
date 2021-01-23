@@ -1,0 +1,90 @@
+.MessagesSection h4{
+    padding-top: 50px;
+    margin-left: 500px;
+    color:white;
+    font-size:12px;
+    font-weight: 700;
+
+
+
+}
+
+
+.MessagesSection h5{
+    margin-left: 500px;
+    color:white;
+    font-size:12px;
+    font-weight: 700;
+}
+
+
+.MessagesSection{
+    border-style:solid;
+    border-width: 1.5pxpx;
+width: 670px ;
+height: 150px;
+border: 2px solid #474A52;
+}
+
+.ChatSection{
+    border-style:solid;
+    border-width: 1.5px;
+width: 670px ;
+height: 100vh;
+border: 2px solid #474A52;
+
+}
+
+.ChatSection h3{
+    padding-top:15px;
+    color:#B1AFCD;
+    margin-left: 330px;
+    font-weight: normal;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+padding-bottom:5px;
+}
+
+.ChatSection input{
+    margin-left: 330px;
+    margin-bottom: 15px ;
+    width: 298px;
+    height: 42px;
+    background: rgba(196, 196, 196, 0.1);
+ border-radius: 5px;
+ border: none;
+ padding: 15px;
+ color: white;
+ padding: 0px;
+}
+
+
+
+.ChatSection input[type=text]{
+    padding-left:5px
+}
+/* .ChatSection div{
+    padding-left:330px;
+    
+} */
+
+
+.MessagingSection input{
+    margin-left: 700px;
+
+    width: 1130.41px;
+    height: 71.23px;    
+    background: rgba(196, 196, 196, 0.1);
+ border-radius: 5px;
+ border: none;
+ padding: 15px;
+ color: white;
+ padding: 0px;
+ 
+}
+
+.MessagingSection input[type=text]{
+    padding-left:50px
+}

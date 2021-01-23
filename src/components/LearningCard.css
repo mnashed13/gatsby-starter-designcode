@@ -1,0 +1,117 @@
+.LearningCard {
+  width: 409px;
+  height: 536px;
+  /* position: relative; */
+  /* overflow: hidden; */
+  border-radius: 5px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+  /* background-color: azure; */
+  background: linear-gradient(
+    124.89deg,
+    rgba(102, 125, 182, 0.3) 7.34%,
+    rgba(0, 130, 200, 0.3) 34.16%,
+    rgba(0, 130, 200, 0.3) 64.68%,
+    rgba(102, 125, 182, 0.3) 93.81%
+  );
+  backdrop-filter: blur(5px);
+  /* Note: backdrop-filter has minimal browser support */
+
+
+  margin-left: 50px;
+  /* margin-top: 15px; */
+}
+
+.LearningCard:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 0 30px 60px rgba(255, 255, 255, 0.1);
+ 
+  z-index: 1;
+}
+
+
+.LearningCard:hover button{
+  color:#0E3050;
+  background: #E5F2FA;
+}
+
+
+.LearningCard img {
+  /* position: absolute; */
+  top: 0;
+  /* margin-top: 50px;  */
+  height:249px;
+  /* width: 489px; */
+  /* background-image: url("../assets/CardImageGroup.png");  */
+  stroke: none;
+}
+
+.LearningCard h3 {
+  color:#E5F2FA;
+  font-size: 24px;
+  margin: 13px 17px 20px 20px;
+  width: 390px;
+  padding-bottom: 10px;
+}
+
+.LearningCard p {
+  color: rgba(255, 255, 255, 0.8);
+
+  font-weight: 200;
+  font-size: 12px;
+  align-self: end;
+  margin: 15px 27px 34px 20px;
+}
+
+.LearningCard h2 {
+  margin: 50px 20px;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(104.74deg, #050a27 0%, #4a548c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.LearningCard a {
+  /* position: absolute; */
+  background: linear-gradient(
+    124.89deg,
+    #667db6 7.34%,
+    #0082c8 34.16%,
+    #0082c8 64.68%,
+    #667db6 93.81%
+  );
+  backdrop-filter: blur(20px);
+  align-items: center;
+  margin-left: 15px;
+  width: 250px;
+}
+
+
+.LearningCard button{
+  width: 150px;
+  margin-bottom: 150px;
+  background: #0b3861;
+  height: 44px;
+  border-radius:5px ;
+  border: none ;
+  color:#E5F2FA;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 700;
+  margin-left: 15px;
+  margin-top: 0px;
+  font-size: 18px;
+  
+}
+
+@media (max-width: 640px) {
+  .LearningCard h2 {
+    font-size: 30px;
+  }
+}

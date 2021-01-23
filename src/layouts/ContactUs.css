@@ -1,0 +1,44 @@
+.ContactPage {
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(354.12deg, #012343 10%, #000000 100%);
+  z-index: inherit;
+}
+
+.ContactHero {
+  height: 100%;
+}
+
+.ContactHeroGroup {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 150px;
+}
+.ContactHero h1 {
+  margin: 0;
+  color: white;
+  font-size: 60px;
+  line-height: 1.2;
+  padding-top: 380px;
+  text-decoration: Uppercase;
+  padding-bottom: 50px;
+
+  font-style: normal;
+
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.82, 0.2, 1);
+  font-weight: 700;
+}
+
+.ContactHero h2 {
+  color: azure;
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.82, 0.2, 1);
+  font-weight: 700;
+}

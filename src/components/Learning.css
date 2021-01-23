@@ -1,0 +1,29 @@
+h1 {
+  font-size: 24px;
+  /* font-family: ; */
+  color: #667db6;
+}
+.buttonBackground a {
+  color: azure;
+  height: 100px;
+}
+.buttonBackground {
+  align-items: center;
+  height: 50px;
+  width: 150px;
+  background: linear-gradient(
+    124.89deg,
+    #667db6 7.34%,
+    #0082c8 34.16%,
+    #0082c8 64.68%,
+    #667db6 93.81%
+  );
+  border-radius: 15px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.learnCard {
+  background: #dadfec;
+}
+

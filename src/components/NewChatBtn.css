@@ -1,0 +1,25 @@
+.NewChatBtn{
+    width: 181.16px;
+height: 62.33px;
+background: white;
+margin-left: 390px;
+margin-top: 140px;
+border-radius: 4px;
+}
+
+.NewChatBtn p{ 
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0E3050;
+    text-align: center;
+    padding-top: 22px;
+}
+
+.NewChatBtn:hover {
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 30px 60px rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,54 @@
+.app button {
+  padding: 8px 20px;
+  font-size: 20px;
+  background: rgba(65, 64, 66, 0);
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  color: aliceblue;
+  transition: 1s;
+  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+    margin-top: 0px;
+}
+
+.app h3 {
+  font-size: 15px;
+}
+
+.Modal Modali.Modal {
+  width: 1155px;
+  height: 1220px;
+  background: #dadfec;
+  border-radius: 15px;
+}
+
+.modali-content {
+  background: #dadfec;
+  border-radius: 25px;
+  width: 755px;
+}
+.container {
+  background: #dadfec;
+
+  height: 500px;
+}
+
+.modali-header button {
+  background: #dadfec;
+}
+
+.modali-header {
+  border-radius: 15px;
+}
+
+.modali-wrapper {
+  backdrop-filter: blur(7px);
+}
+
+
+.modali modali-size-regular{
+  border-radius: 25px;
+}

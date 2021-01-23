@@ -1,0 +1,47 @@
+.CoursePageHeroGroup{
+  margin-left: 330px;
+  padding-top: 100px;
+}
+
+.CoursePageHeroGroup h1{
+  color:aliceblue;
+  font-weight:700;
+}
+
+
+.CoursePageHeroGroup input{
+  margin-bottom: 15px ;
+  width: 575px;
+  height: 57px;
+  background: rgba(196, 196, 196, 0.1);
+border-radius: 5px;
+border: none;
+padding: 15px;
+color: white;
+margin-top: 20px;
+
+}
+.LearningHistory{
+  margin-left: 330px;
+
+}
+.LearningHistory h2{
+  color: white;
+  font-size: 18px;
+}
+
+
+
+.CourseViewSection {
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  gap: 0px 0px;
+  margin:15px;
+  margin-left: 330px;
+}
+
+.CourseViewSection div {
+ 
+  margin-right: 30px;
+  margin-bottom: 10px;
+}

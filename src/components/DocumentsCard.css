@@ -1,0 +1,38 @@
+.DocumentsCard{
+    flex-direction: column;
+        width: 200px;
+    height: 250px;
+    background: #E5F2FA;
+    border-radius: 5px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin:15px;
+    
+    
+    }
+    
+    
+    .DocumentsCard img{
+    margin-top: 70px;
+        height: 109px;
+    }
+    
+    .DocumentsCard p{
+    
+        font-size: 10px;
+        font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    margin: 0;
+    }
+    
+    .DocumentsCard:hover div{
+    
+            transform: scale(1.1, 1.1);
+            box-shadow: 0 30px 60px rgba(whitesmoke); 
+        }
+       

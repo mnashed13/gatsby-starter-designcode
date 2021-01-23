@@ -1,0 +1,131 @@
+.AccountsPage {
+    height: auto;
+      background-size: cover;
+    background-position: center;
+    background: linear-gradient(354.12deg, #012343 10%, #000000 100%);
+    z-index: inherit;
+  }
+  
+  .DashboardNavBG {
+    background: linear-gradient(180deg, #0E3050 0%, #103A79 57.44%, #0E3050 100%);
+    width: 300px;
+    height: 100vh;
+    position: absolute;
+  }
+  .DocumentsBG1{
+    
+    /* background: url('https://p50.f0.n0.cdn.getcloudapp.com/items/6quPgJ2n/GroupBGIMG3.png?source=viewer&v=3e088a5189d85cab837a28f6399f43bc'); */
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+  .LearningheroSection h2{
+    padding-bottom: 50px;
+  }
+  .FeaturedSection{
+  padding-top: 100px;
+  }
+  .AccountsHero {
+    height: 5000px;
+  }
+  .AccountsHeroGroup {
+    margin: 0 auto;
+    /* text-align: center; */
+    padding-top: 150px;
+  /* padding-left: 450px; */
+  padding-bottom: 0px;
+  }
+  
+  
+  
+  .AccountsHero h1 {
+    margin: 0;
+  color: white;
+  font-size: 36px;
+  line-height: 1.2;
+  
+  text-decoration: Uppercase;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.82, 0.2, 1);
+  font-weight: 600;
+  }
+  .AccountsHero h2 {
+  margin: 0;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: Uppercase;
+  font-style: normal;
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.82, 0.2, 1);
+  }
+  .LearningheroSection h2{
+  text-align: center;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 0%;
+  color:white
+  }
+
+
+  .PersonalDetailsSections {
+      position: relative;
+    padding-left: 500px;
+
+}
+
+
+
+  .PersonalDetailsSections h3{
+    padding-left: 500px;
+      color:white;
+  }
+  
+ 
+  
+  
+  .FAHeaderImageSetting img {
+  
+    height: 55px;
+    margin-right: 15px;
+    margin-top: 0px;
+    margin-left: 200px;
+  }
+  
+  
+  .FAHeaderImageSetting  {
+  display: flex;
+  -ms-grid-columns: 70% 30%;
+   margin-left: 300px;
+  }
+
+  .SavedDocRow{
+    display:flex
+  }
+  
+  .subtitleHeader h3{
+    font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  
+  color: #FFFFFF;
+  
+  mix-blend-mode: normal;
+  opacity: 0.9;
+  
+  }
+  
+  /* .DocumentsCardImage DocumentsCard{
+  
+    
+  } */
+  
+  
+  
+   

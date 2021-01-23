@@ -1,0 +1,130 @@
+.CommsCard {
+    width: 190px;
+    height: 74px;
+    /* position: relative; */
+    /* overflow: hidden; */
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    cursor: pointer;
+    /* background-color: azure; */
+    background: #4F4F4F;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    margin-right: 15px;
+   
+
+  }
+  
+   .CommsCard:hover{
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    transform: translateY(3px);
+    background:whitesmoke;
+
+
+  }
+
+  .CommsCard:hover h3{
+    color: #050a27;
+  }
+  
+  .CommsCard:hover h4{
+    color: #050a27;
+  }
+  /* .CommsCard:hover img {
+    transform: translateY(-20px);
+  } */
+  
+  /* .CommsCard img {
+    height: 50%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    padding-left: 85px;
+    margin-top: 50px;
+  } */
+  
+  .CommsCard h3 {
+    color:white;
+
+    font-size: 12px;
+    margin: 20px 0 0 20px;
+    width: 190px;
+  }
+  .CommsCard h4 {
+    color:white;
+
+    font-size: 12px;
+    margin: 5px 0 0 20px;
+    width: 190px;
+  }
+  
+  .CommsCard p {
+    color: rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    align-self: end;
+    margin: 0 0 20px 20px;
+  }
+  
+  .CommsCards h2 {
+    margin: 50px 20px;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 700;
+    background: linear-gradient(104.74deg, #050a27 0%, #4a548c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .CommsCard a {
+    /* position: absolute; */
+    background: linear-gradient(
+      124.89deg,
+      #667db6 7.34%,
+      #0082c8 34.16%,
+      #0082c8 64.68%,
+      #667db6 93.81%
+    );
+    backdrop-filter: blur(20px);
+    align-items: center;
+    margin-left: 15px;
+    width: 250px;
+  }
+ 
+
+  .CommsCard a:hover {
+    /* position: absolute; */
+    background: red;
+    backdrop-filter: blur(20px);
+    align-items: center;
+    margin-left: 15px;
+    width: 250px;
+  }
+  
+  .CommsCard img{
+    top: 0;
+    /* margin-top: 14px; 
+     margin-left: 50px; */
+     margin-top: -58px;
+     margin-left: 129px;
+ 
+    height:49px;
+    /* padding-left: 85px;
+    margin-top: 50px; */
+
+
+  }
+  @media (max-width: 640px) {
+    .CommsCards h2 {
+      font-size: 30px;
+    }
+  }
+  

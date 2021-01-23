@@ -1,0 +1,22 @@
+.ResumeCourseCard{
+
+    height: 200px;
+    width:300px;
+    background:red;
+    border-radius:5px;
+}
+
+
+.ResumeCourseCard h3{
+ padding-top: 100px;
+ margin-left: 5px;
+}
+
+
+.ResumeCourseCard p2{
+
+    margin-left: 5px;
+   }
+
+
+
