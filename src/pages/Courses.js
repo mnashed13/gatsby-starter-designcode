@@ -20,7 +20,6 @@ const CoursesPage = () => (
             <h2> Learning never stops, Get start on your journey here</h2>
           </div>
           <br />
-
           <div className="PricingSectionHeader">
             <h2> Featured Courses</h2>
           </div>
@@ -112,10 +111,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lacus eu dui fe
                 link="./Home"
               />
             </div>
-            <div class="">
-
-            </div>
-
 
           </div>
         </div>
@@ -123,7 +118,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lacus eu dui fe
       </div>
     </div>
   </div>
-
 )
 
 export default CoursesPage

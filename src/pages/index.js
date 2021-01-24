@@ -8,8 +8,13 @@ import PricingCard from '../components/PricingCard'
 import AuthModal from '../components/Modal'
 import StageCard from '../components/StageCard'
 import Header from '../components/header'
-import DarkModeButton from '../components/DarkMode'
-import Auth0Provider from '@auth0/auth0-react'
+
+
+
+
+
+
+
 function IndexPage() {
   return (
 

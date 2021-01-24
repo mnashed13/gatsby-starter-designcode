@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import './Header.css'
-import AuthModal from '../components/Modal'
-import LoginButton from './loginButton'
+// import AuthModal from '../components/Modal'
+// import LoginButton from './loginButton'
 import DarkModeButton from './DarkMode'
 import AuthenticationButton from './authentication-button'
 
@@ -52,7 +52,10 @@ class Header extends React.Component {
           </Link>
           {/* <AuthModal /> */}
           {/* <LoginButton /> */}
-          <AuthenticationButton />
+          {/* <AuthenticationButton /> */}
+          <Link to="/AuthenticationPage">
+            <button>Login</button>
+          </Link>
           <DarkModeButton />
           {/* <SingleModal></SingleModal> */}
         </div>

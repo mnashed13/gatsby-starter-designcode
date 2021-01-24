@@ -20,9 +20,12 @@ const ProcessPage = () => (
             </div>
           </div>
         </div>
-        <Footer />
+
+
       </div>
+
     </div>
+    <Footer />
   </div>
 )
 
