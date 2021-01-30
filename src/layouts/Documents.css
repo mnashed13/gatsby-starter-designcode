@@ -137,10 +137,12 @@ opacity: 0.9;
 
 }
 
-/* .DocumentsCardImage DocumentsCard{
+.DocumentsCardImage{ 
+  display: flex;
+  flex-direction: row;
 
   
-} */
+}
 
 
 

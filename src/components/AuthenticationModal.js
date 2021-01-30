@@ -1,44 +1,47 @@
 import React from 'React'
 import './Authmodal.css'
-import useState from 'React'
-// import 'firebase/auth'
-// import 'firebase/firestore'
-
-// import { useAuthState } from 'react-firebase-hooks/auth'
-// import { useCollectionData } from 'react-firebase-hooks/firestore'
+import { auth } from './firebase'
+import { useHistory } from 'react-router-dom'
 
 
-// firebase.initialiseApp({
-//     // Firebase config
-//     apiKey: "AIzaSyBiP0Vp-oNxOH7BLNtKDOzT8YWFQ3zVrOA",
-//     authDomain: "gospelofwealth-89b37.firebaseapp.com",
-//     databaseURL: "https://gospelofwealth-89b37.firebaseio.com",
-//     projectId: "gospelofwealth-89b37",
-//     storageBucket: "gospelofwealth-89b37.appspot.com",
-//     messagingSenderId: "993649495288",
-//     appId: "1:993649495288:web:8e3ec77003ee4b859a7f0d",
-//     measurementId: "G-8ZZVJKJNYH"
-// })
+
+function signIn() {
+    const history = useHistory();
+    // const [email, setEmail] = useState('');
+    // const [password, setPassword] = useState('');
+    const [email] = console.log("email")
+    const [password] = console.log("password")
 
 
-function SignIn() {
-    const [email, setEmail] = useState('email');
-    const [password, setPassword] = useState('password');
+    const SignIn = () => {
+        auth.isSignInWithEmailandPassword(email, password).then(res => {
+            history.push('./dashboard');
+        }).catch(err => {
+
+            console.log("Error with Login, please try again")
+        })
+    }
 }
 
-function FirebaseSignInAuth() {
-    console.log("firebase Signin Authentication")
-}
+// function signUp() {
+//     // const [email, setEmail] = useState('');
+//     // const [password, setPassword] = useState('');
+// }
+
+
+// function FirebaseSignInAuth() {
+//     console.log("firebase Signin Authentication")
+// }
 
 function handeMotionSignUp() {
-    console.log("hande Motion")
+    console.log("hande Sign Up Motion")
     const container = document.getElementById('container');
 
     container.classList.add("right-panel-active");
 }
 
 function handeMotionSignIn() {
-    console.log("hande Motion")
+    console.log("hande Sign In Motion")
     const container = document.getElementById('container');
 
     container.classList.remove("right-panel-active");
@@ -53,7 +56,6 @@ function handeMotionSignIn() {
 
 
 // }
-
 
 
 const AuthenticationModal = props => (
@@ -84,10 +86,13 @@ const AuthenticationModal = props => (
 
                     </div>
                     <span>or use your account</span>
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
+                    <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.currentTarget.value)} />
+                    <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.currentTarget.value)} />
+
+                    {/* <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" /> */}
                     <a href="#">Forgot your password?</a>
-                    <button >Sign In</button>
+                    <button onClick={signIn}>Sign In</button>
                 </form>
             </div>
             <div class="overlay-container">
@@ -109,9 +114,6 @@ const AuthenticationModal = props => (
             </div>
         </div>
     </div>
-
-
-
 )
 
 export default AuthenticationModal
