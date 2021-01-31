@@ -5,23 +5,29 @@ import { useHistory } from 'react-router-dom'
 
 
 
-function signIn() {
-    const history = useHistory();
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
-    const [email] = console.log("email")
-    const [password] = console.log("password")
+// function signIn(e) {
+//     const history = useHistory();
+//     const [email, setEmail] = useState('');
+//     const [password, setPassword] = useState('');
+
+//     const [email] = console.log(e.target.value);
+//     const [password] = console.log(e.target.value);
+
+//     const SignIn = () => {
+//         auth.isSignInWithEmailandPassword(email, password).then(res => {
+//             history.push('./dashboard');
+//         }).catch(err => {
+
+//             console.log("Error with Login, please try again")
+//         })
+//     }
+// }
 
 
-    const SignIn = () => {
-        auth.isSignInWithEmailandPassword(email, password).then(res => {
-            history.push('./dashboard');
-        }).catch(err => {
-
-            console.log("Error with Login, please try again")
-        })
-    }
+function handleChange(e) {
+    console.log(e.target.value);
 }
+
 
 // function signUp() {
 //     // const [email, setEmail] = useState('');
@@ -86,13 +92,13 @@ const AuthenticationModal = props => (
 
                     </div>
                     <span>or use your account</span>
-                    <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.currentTarget.value)} />
-                    <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.currentTarget.value)} />
+                    {/* <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.currentTarget.value)} />
+                    <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.currentTarget.value)} /> */}
 
-                    {/* <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" /> */}
+                    <input type="email" placeholder="Email" onChange={handleChange} />
+                    <input type="password" placeholder="Password" onChange={handleChange} />
                     <a href="#">Forgot your password?</a>
-                    <button onClick={signIn}>Sign In</button>
+                    <button>Sign In</button>
                 </form>
             </div>
             <div class="overlay-container">
