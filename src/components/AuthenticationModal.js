@@ -1,7 +1,7 @@
-import React from 'React'
+import React, { useState } from 'React'
 import './Authmodal.css'
-import { auth } from './firebase'
-import { useHistory } from 'react-router-dom'
+// import { auth } from './firebase'
+// import { useHistory } from 'react-router-dom'
 
 
 
@@ -22,12 +22,12 @@ import { useHistory } from 'react-router-dom'
 //         })
 //     }
 // }
-
-
 function handleChange(e) {
     console.log(e.target.value);
-}
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
+}
 
 // function signUp() {
 //     // const [email, setEmail] = useState('');
@@ -92,8 +92,8 @@ const AuthenticationModal = props => (
 
                     </div>
                     <span>or use your account</span>
-                    {/* <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.currentTarget.value)} />
-                    <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.currentTarget.value)} /> */}
+                    {/* <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.currentTarget.value)} /> */}
+                    {/* <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.currentTarget.value)} /> */}
 
                     <input type="email" placeholder="Email" onChange={handleChange} />
                     <input type="password" placeholder="Password" onChange={handleChange} />
@@ -123,3 +123,4 @@ const AuthenticationModal = props => (
 )
 
 export default AuthenticationModal
+//
