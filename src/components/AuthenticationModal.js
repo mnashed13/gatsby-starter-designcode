@@ -24,8 +24,8 @@ import './Authmodal.css'
 // }
 function handleChange(e) {
     console.log(e.target.value);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [password, setPassword] = useState('');
 
 }
 
