@@ -38,7 +38,7 @@ class Header extends React.Component {
           <Link to="">
             <img src={require('../assets/LogoWhite.png')} />
           </Link>
-          <Link to="/ ">
+          <Link to="">
             <button>Home</button>
           </Link>
           {/* <Link to="/ContactUs">

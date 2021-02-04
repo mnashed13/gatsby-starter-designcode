@@ -1,8 +1,27 @@
-import React, { useState } from 'React'
+// import React, { useState } from 'React'
+import React from 'React'
 import './Authmodal.css'
-// import { auth } from './firebase'
-// import { useHistory } from 'react-router-dom'
+import firebase from "firebase/app";
+import "firebase/auth";
 
+//SignIn 
+
+const SignIn = (email, password) => {
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            // Signed in 
+            var user = userCredential.user;
+            // ...
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ..
+        });
+}
+
+
+//SignUP Function 
 
 
 // function signIn(e) {
@@ -22,12 +41,12 @@ import './Authmodal.css'
 //         })
 //     }
 // }
-function handleChange(e) {
-    console.log(e.target.value);
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
+// function handleChange(e) {
+//     console.log(e.target.value);
+//     // const [email, setEmail] = useState('');
+//     // const [password, setPassword] = useState('');
 
-}
+// }
 
 // function signUp() {
 //     // const [email, setEmail] = useState('');
@@ -92,13 +111,12 @@ const AuthenticationModal = props => (
 
                     </div>
                     <span>or use your account</span>
-                    {/* <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.currentTarget.value)} /> */}
-                    {/* <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.currentTarget.value)} /> */}
 
-                    <input type="email" placeholder="Email" onChange={handleChange} />
-                    <input type="password" placeholder="Password" onChange={handleChange} />
+
+                    <input type="email" placeholder="Email" value={email} />
+                    <input type="password" placeholder="Password" value={password} />
                     <a href="#">Forgot your password?</a>
-                    <button>Sign In</button>
+                    <button onClick={SignIn()}>Sign In</button>
                 </form>
             </div>
             <div class="overlay-container">

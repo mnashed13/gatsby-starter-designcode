@@ -98,9 +98,6 @@ const DocumentsPage = () => (
                                 image="https://p50.f0.n0.cdn.getcloudapp.com/items/z8u4dwl6/17b80326-261b-4182-a81a-adca19fd8896.png?source=viewer&v=5e589d1027530db2498d0dcc176ded51"
                                 text="test Folder   "
                                 date="13/20/2020"
-
-
-
                             />
                             <DocumentsCard
                                 image="https://p50.f0.n0.cdn.getcloudapp.com/items/p9ureb4K/62566e05-d68c-4510-8a10-7f2f932e9393.png?source=viewer&v=d25b3635fa50fa847b2c0830ceb1eed1"
