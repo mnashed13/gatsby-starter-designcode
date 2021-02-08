@@ -1,144 +1,208 @@
-// import React, { useState } from 'React'
-import React from 'React'
+import React, { useState, useEffect } from 'React'
 import './Authmodal.css'
-import firebase from "firebase/app";
-import "firebase/auth";
+import { Icon, InlineIcon } from '@iconify/react';
+import facebookF from '@iconify/icons-uim/facebook-f';
+import googleIcon from '@iconify/icons-grommet-icons/google';
+import fire from '../firebase.config';
 
-//SignIn 
+function AuthenticationModal() {
 
-const SignIn = (email, password) => {
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            // Signed in 
-            var user = userCredential.user;
-            // ...
-        })
-        .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // ..
-        });
-}
+    // const [user, setUser] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [password, setPassword] = useState('');
+    // const [emailError, setEmailError] = useState('');
+    // const [passwordError, setPasswordError] = useState('');
+    // const [hasAccount, setHasAccount] = useState()
 
 
-//SignUP Function 
+    // const clearInputs = () => {
+    //     setEmail('');
+    //     setPassword('');
+    // }
+
+    // const clearErrors = () => {
+    //     setEmailError('');
+    //     setPasswordError('');
+    // }
 
 
-// function signIn(e) {
-//     const history = useHistory();
-//     const [email, setEmail] = useState('');
-//     const [password, setPassword] = useState('');
+    // const HandleLogin = () => {
+    //     clearErrors()
+    //     fire
+    //         .auth()
+    //         .signInWithEmailandPassword(email, password)
+    //         .catch(err => {
 
-//     const [email] = console.log(e.target.value);
-//     const [password] = console.log(e.target.value);
-
-//     const SignIn = () => {
-//         auth.isSignInWithEmailandPassword(email, password).then(res => {
-//             history.push('./dashboard');
-//         }).catch(err => {
-
-//             console.log("Error with Login, please try again")
-//         })
-//     }
-// }
-// function handleChange(e) {
-//     console.log(e.target.value);
-//     // const [email, setEmail] = useState('');
-//     // const [password, setPassword] = useState('');
-
-// }
-
-// function signUp() {
-//     // const [email, setEmail] = useState('');
-//     // const [password, setPassword] = useState('');
-// }
+    //             switch (err.code) {
+    //                 case "auth/invalid-email":
+    //                 case "auth/user-diabled":
+    //                 case "auth/user-not-found":
+    //                     setEmailError(err.message);
+    //                     break;
+    //                 case "auth/wrong-password":
+    //                     setPasswordError(err.message)
+    //                     break;
+    //             }
+    //         }
+    //         )
+    // };
 
 
-// function FirebaseSignInAuth() {
-//     console.log("firebase Signin Authentication")
-// }
+    // const HandleSignUp = () => {
+    //     clearErrors();
+    //     fire
+    //         .auth()
+    //         .createUserWithEmailAndPassword(email, password)
+    //         .catch(err => {
 
-function handeMotionSignUp() {
-    console.log("hande Sign Up Motion")
-    const container = document.getElementById('container');
+    //             switch (err.code) {
+    //                 case "auth/email-already-in-use":
+    //                 case "auth/invalid-email":
+    //                     setEmailError(err.message);
+    //                     break;
+    //                 case "auth/wea-password":
+    //                     setPasswordError(err.message)
+    //                     break;
+    //             }
+    //         }
+    //         )
+    // };
 
-    container.classList.add("right-panel-active");
-}
+    // const handleLogout = () => {
+    //     fire.auth().signOut();
+    // };
 
-function handeMotionSignIn() {
-    console.log("hande Sign In Motion")
-    const container = document.getElementById('container');
+    // const authListener = () => {
 
-    container.classList.remove("right-panel-active");
+    //     fire.auth.onAuthStateChanged(user => {
 
-}
+    //         if (user) {
+    //             clearInputs();
+    //             setUser(user);
+    //         } else {
+    //             setUser("")
+    //         }
+    //     })
+    // };
+
+    // useEffect(() => {
+    //     authListener();
+
+    // }, []);
 
 
 
-// function GoogleSignIn() {
-//     const provider = new firebase.auth.GoogleAuthProvider();
-//     auth.signInWithPopup(provider);
+    function handeMotionSignUp() {
+        console.log("hande Sign Up Motion")
+        const container = document.getElementById('container');
+
+        container.classList.add("right-panel-active");
+    }
+
+    function handeMotionSignIn() {
+        console.log("hande Sign In Motion")
+        const container = document.getElementById('container');
+
+        container.classList.remove("right-panel-active");
+
+    }
+
+    function GoogleSignIn() {
+        console.log("Google Sign In Method start")
+    }
+
+    function FacebookSignIn() {
+        console.log("Facebook SignIn Method Start")
+    }
+
+    function GoogleSignUp() {
+        console.log("Google Sign Up Method")
+    }
+
+    function FacebookSignUp() {
+        console.log("Facebook Sign Up Method")
+    }
 
 
-// }
 
 
-const AuthenticationModal = props => (
 
-    <div className="AuthModal">
-        <div class="container" id="container">
-            <div class="form-container sign-up-container">
-                <form action="#">
-                    <h1>Create Account</h1>
-                    <div class="social-container">
-                        {/* Google */}
-                        <a href="#" class="social"><i class="fab fa-google-plus-g"  ></i></a>
 
+
+
+
+    return (
+        <div>
+            <div className="AuthModal">
+                <div class="container" id="container">
+                    <div class="form-container sign-up-container">
+                        <form action="#">
+                            <h1>Create Account</h1>
+                            <div class="social-container">
+                                {/* Google */}
+                                <a href="#" class="social"><Icon icon={facebookF} style={{ color: '#103a79', fontSize: '24px' }} onClick={FacebookSignUp} /></a>
+                                <a href="#" class="social"><Icon icon={googleIcon} style={{ fontSize: '24px' }} onClick={GoogleSignUp} /> </a>
+
+                            </div>
+                            <span>or use your email for registration</span>
+                            <input type="text" placeholder="Name" />
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                            <button>Sign Up</button>
+                        </form>
                     </div>
-                    <span>or use your email for registration</span>
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
-                    <button>Sign Up</button>
-                </form>
-            </div>
-            <div class="form-container sign-in-container">
-                <form action="#">
-                    <h1>Sign in</h1>
-                    <div class="social-container">
+                    <div class="form-container sign-in-container">
+                        <form action="#">
+                            <h1>Sign in</h1>
+                            <div class="social-container">
 
-                        <a href="#" class="social"><i class="fab fa-google-plus-g" ></i></a>
+                                <a href="#" class="social">
+                                    <Icon icon={facebookF} style={{ color: '#103a79', fontSize: '24px' }} onClick={FacebookSignIn} />
+                                </a>
+                                <a href="#" class="social">
+                                    <Icon icon={googleIcon} style={{ fontSize: '24px' }} onClick={GoogleSignIn} />
+                                </a>
 
+                            </div>
+                            <span>or use your account</span>
+
+                            {/* <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <p className="errorMessage">{emailError}</p>
+                        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <p className="errorMessage">{passwordError}</p> */}
+
+
+                            <input type="email" placeholder="Email" />
+
+                            <input type="password" placeholder="Password" />
+
+
+                            <a href="#">Forgot your password?</a>
+                            <button>Sign In</button>
+                        </form>
                     </div>
-                    <span>or use your account</span>
+                    <div class="overlay-container">
+                        <div class="overlay">
+                            <div class="overlay-panel overlay-left">
+                                <img src={require('../assets/LogoWhite.png')} />
+                                <h1>Welcome Back!</h1>
+                                <p>To keep connected with us please login with your personal info</p>
+                                <button class="ghost" id="signIn" onClick={handeMotionSignIn}>Sign In</button>
+                            </div>
+                            <div class="overlay-panel overlay-right">
+                                <img src={require('../assets/LogoWhite.png')} />
+                                <h1>Hey, there !</h1>
+                                <p>Enter your personal details and start journey with us</p>
 
+                                <button class="ghost" onClick={handeMotionSignUp} >Sign Up</button>
 
-                    <input type="email" placeholder="Email" value={email} />
-                    <input type="password" placeholder="Password" value={password} />
-                    <a href="#">Forgot your password?</a>
-                    <button onClick={SignIn()}>Sign In</button>
-                </form>
-            </div>
-            <div class="overlay-container">
-                <div class="overlay">
-                    <div class="overlay-panel overlay-left">
-                        <h1>Welcome Back!</h1>
-                        <p>To keep connected with us please login with your personal info</p>
-                        <button class="ghost" id="signIn" onClick={handeMotionSignIn}>Sign In</button>
-                    </div>
-                    <div class="overlay-panel overlay-right">
-                        <img src={require('../assets/LogoWhite.png')} />
-                        <h1>Hey, there !</h1>
-                        <p>Enter your personal details and start journey with us</p>
-
-                        <button class="ghost" onClick={handeMotionSignUp} >Sign Up</button>
-
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-)
+    )
 
+};
 export default AuthenticationModal
-//

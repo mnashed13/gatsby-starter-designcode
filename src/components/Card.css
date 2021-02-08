@@ -45,14 +45,17 @@
 }
 
 .Card h3 {
-  color: grey;
+  color: #E5F2FA;
+
   font-size: 30px;
   margin: 20px 0 0 20px;
   width: 190px;
 }
 
 .Card p {
-  color: rgba(0, 0, 0, 0.8);
+  /* color: rgba(0, 0, 0, 0.8); */
+  color: #E5F2FA;
+  
   text-transform: uppercase;
   font-weight: 600;
   font-size: 18px;

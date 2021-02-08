@@ -199,6 +199,19 @@ label {
   padding-bottom: 150px;
 }
 
+.HeroGroup p{
+  color: #E5F2FA;
+  font-size: 20px ;
+}
+
+
+.infoTextGroup p{
+  color: #E5F2FA;
+  font-size: 20px ;
+}
+
+
+
 .PricingSection h2 {
   font-style: normal;
   font-weight: bold;

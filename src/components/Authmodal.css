@@ -249,3 +249,7 @@ text-transform: uppercase;
 	height: 40px;
 	width: 40px;
 }
+.overlay-left img {
+    height: 50px;
+    padding-bottom: 15px;
+}

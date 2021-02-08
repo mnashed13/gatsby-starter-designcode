@@ -29,7 +29,7 @@ export const makeMainRoutes = () => {
         <BrowserRouter history={history} component={App}>
             <div>
                 {/* '/' route*/}
-                <Route path="/" render={(props) => <App auth={auth} {...props} />} />
+                <Route path="/ " render={(props) => <App auth={auth} {...props} />} />
                 {/* 'Homepage' route*/}
                 <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
                 {/* 'Chat' route*/}
