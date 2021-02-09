@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'React'
+import React, { useState, useEffect } from 'react'
 import './Authmodal.css'
 import { Icon, InlineIcon } from '@iconify/react';
 import facebookF from '@iconify/icons-uim/facebook-f';
@@ -7,12 +7,12 @@ import fire from '../firebase.config';
 
 function AuthenticationModal() {
 
-    // const [user, setUser] = useState('');
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
-    // const [emailError, setEmailError] = useState('');
-    // const [passwordError, setPasswordError] = useState('');
-    // const [hasAccount, setHasAccount] = useState()
+    const [user, setUser] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [hasAccount, setHasAccount] = useState()
 
 
     // const clearInputs = () => {
@@ -166,15 +166,15 @@ function AuthenticationModal() {
                             </div>
                             <span>or use your account</span>
 
-                            {/* <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <p className="errorMessage">{emailError}</p>
-                        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                        <p className="errorMessage">{passwordError}</p> */}
+                            <input type="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <p className="errorMessage">{emailError}</p>
+                            <input type="password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)} />
+                            <p className="errorMessage">{passwordError}</p>
 
 
-                            <input type="email" placeholder="Email" />
+                            {/* <input type="email" placeholder="Email" />
 
-                            <input type="password" placeholder="Password" />
+                            <input type="password" placeholder="Password" /> */}
 
 
                             <a href="#">Forgot your password?</a>
