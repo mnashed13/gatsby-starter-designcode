@@ -15,80 +15,80 @@ function AuthenticationModal() {
     const [hasAccount, setHasAccount] = useState()
 
 
-    // const clearInputs = () => {
-    //     setEmail('');
-    //     setPassword('');
-    // }
+    const clearInputs = () => {
+        setEmail('');
+        setPassword('');
+    }
 
-    // const clearErrors = () => {
-    //     setEmailError('');
-    //     setPasswordError('');
-    // }
-
-
-    // const HandleLogin = () => {
-    //     clearErrors()
-    //     fire
-    //         .auth()
-    //         .signInWithEmailandPassword(email, password)
-    //         .catch(err => {
-
-    //             switch (err.code) {
-    //                 case "auth/invalid-email":
-    //                 case "auth/user-diabled":
-    //                 case "auth/user-not-found":
-    //                     setEmailError(err.message);
-    //                     break;
-    //                 case "auth/wrong-password":
-    //                     setPasswordError(err.message)
-    //                     break;
-    //             }
-    //         }
-    //         )
-    // };
+    const clearErrors = () => {
+        setEmailError('');
+        setPasswordError('');
+    }
 
 
-    // const HandleSignUp = () => {
-    //     clearErrors();
-    //     fire
-    //         .auth()
-    //         .createUserWithEmailAndPassword(email, password)
-    //         .catch(err => {
+    const HandleLogin = () => {
+        clearErrors()
+        fire
+            .auth()
+            .signInWithEmailandPassword(email, password)
+            .catch(err => {
 
-    //             switch (err.code) {
-    //                 case "auth/email-already-in-use":
-    //                 case "auth/invalid-email":
-    //                     setEmailError(err.message);
-    //                     break;
-    //                 case "auth/wea-password":
-    //                     setPasswordError(err.message)
-    //                     break;
-    //             }
-    //         }
-    //         )
-    // };
+                switch (err.code) {
+                    case "auth/invalid-email":
+                    case "auth/user-diabled":
+                    case "auth/user-not-found":
+                        setEmailError(err.message);
+                        break;
+                    case "auth/wrong-password":
+                        setPasswordError(err.message)
+                        break;
+                }
+            }
+            )
+    };
 
-    // const handleLogout = () => {
-    //     fire.auth().signOut();
-    // };
 
-    // const authListener = () => {
+    const HandleSignUp = () => {
+        clearErrors();
+        fire
+            .auth()
+            .createUserWithEmailAndPassword(email, password)
+            .catch(err => {
 
-    //     fire.auth.onAuthStateChanged(user => {
+                switch (err.code) {
+                    case "auth/email-already-in-use":
+                    case "auth/invalid-email":
+                        setEmailError(err.message);
+                        break;
+                    case "auth/wea-password":
+                        setPasswordError(err.message)
+                        break;
+                }
+            }
+            )
+    };
 
-    //         if (user) {
-    //             clearInputs();
-    //             setUser(user);
-    //         } else {
-    //             setUser("")
-    //         }
-    //     })
-    // };
+    const handleLogout = () => {
+        fire.auth().signOut();
+    };
 
-    // useEffect(() => {
-    //     authListener();
+    const authListener = () => {
 
-    // }, []);
+        fire.auth.onAuthStateChanged((user) => {
+
+            if (user) {
+                clearInputs();
+                setUser(user);
+            } else {
+                setUser("")
+            }
+        })
+    };
+
+    useEffect(() => {
+        authListener();
+
+    }, []);
 
 
 

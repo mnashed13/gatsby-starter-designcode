@@ -1,22 +1,29 @@
 .ResumeCourseCard{
-
+    
     height: 200px;
     width:300px;
-    background:red;
+    background:url("https://p50.f0.n0.cdn.getcloudapp.com/items/jkueZORm/f9511cd4-2713-45ca-b5eb-cf9f10ef6c7a.png?source=viewer&v=9dce04c09663062c3a5c1eee2b96f934");
     border-radius:5px;
 }
-
+.ResumeCourseCard :hover{
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.375)
+   }
 
 .ResumeCourseCard h3{
  padding-top: 100px;
  margin-left: 5px;
+ color:White;
 }
 
 
 .ResumeCourseCard p2{
 
     margin-left: 5px;
+    color:White;
    }
+
+
+
 
 
 

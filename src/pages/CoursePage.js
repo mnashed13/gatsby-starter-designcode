@@ -23,6 +23,7 @@ const CoursesContentPage = () => (
                 <div className="LearningHistory">
                     <h2>Resume Courses</h2>
                     <ResumeCourseCard
+
                         coursetitle="Banking 101"
                         tutor="Sue Zinc"
                     />
