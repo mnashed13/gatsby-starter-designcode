@@ -13,6 +13,7 @@ function AuthenticationModal() {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [hasAccount, setHasAccount] = useState()
+    const history = useHistory();
 
 
     const clearInputs = () => {
@@ -30,7 +31,7 @@ function AuthenticationModal() {
         clearErrors()
         fire
             .auth()
-            .signInWithEmailandPassword(email, password)
+            .signInWithEmailAndPassword(email, password)
             .catch(err => {
 
                 switch (err.code) {
@@ -45,6 +46,11 @@ function AuthenticationModal() {
                 }
             }
             )
+
+        console.log("Login Succssful")
+        // .getRedirectResult()
+        history.push('./dashboard')
+
     };
 
 
@@ -74,7 +80,7 @@ function AuthenticationModal() {
 
     const authListener = () => {
 
-        fire.auth.onAuthStateChanged((user) => {
+        fire.auth().onAuthStateChanged((user) => {
 
             if (user) {
                 clearInputs();
@@ -140,8 +146,8 @@ function AuthenticationModal() {
                             <h1>Create Account</h1>
                             <div class="social-container">
                                 {/* Google */}
-                                <a href="#" class="social"><Icon icon={facebookF} style={{ color: '#103a79', fontSize: '24px' }} onClick={FacebookSignUp} /></a>
-                                <a href="#" class="social"><Icon icon={googleIcon} style={{ fontSize: '24px' }} onClick={GoogleSignUp} /> </a>
+                                {/* <a href="#" class="social"><Icon icon={facebookF} style={{ color: '#103a79', fontSize: '24px' }} onClick={FacebookSignUp} /></a>
+                                <a href="#" class="social"><Icon icon={googleIcon} style={{ fontSize: '24px' }} onClick={GoogleSignUp} /> </a> */}
 
                             </div>
                             <span>or use your email for registration</span>
@@ -167,18 +173,16 @@ function AuthenticationModal() {
                             <span>or use your account</span>
 
                             <input type="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
-                            <p className="errorMessage">{emailError}</p>
+                            <p className="errorMsg">{emailError}</p>
                             <input type="password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)} />
                             <p className="errorMessage">{passwordError}</p>
 
 
-                            {/* <input type="email" placeholder="Email" />
-
-                            <input type="password" placeholder="Password" /> */}
-
 
                             <a href="#">Forgot your password?</a>
-                            <button>Sign In</button>
+                            {/* <div className="btnContainer"> */}
+                            <button onClick={HandleLogin}>Sign In</button>
+                            {/* </div> */}
                         </form>
                     </div>
                     <div class="overlay-container">
