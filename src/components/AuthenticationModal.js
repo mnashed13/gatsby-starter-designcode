@@ -13,7 +13,7 @@ function AuthenticationModal() {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [hasAccount, setHasAccount] = useState()
-    const history = useHistory();
+    // const history = useHistory(); 
 
 
     const clearInputs = () => {
@@ -48,8 +48,7 @@ function AuthenticationModal() {
             )
 
         console.log("Login Succssful")
-        // .getRedirectResult()
-        history.push('./dashboard')
+        // redirectUri = 'http://localhost:8000'
 
     };
 
@@ -90,6 +89,10 @@ function AuthenticationModal() {
             }
         })
     };
+
+    const ForgotPassword = (user) => {
+        console.log("Forgot Password Function is here")
+    }
 
     useEffect(() => {
         authListener();
@@ -137,6 +140,7 @@ function AuthenticationModal() {
 
 
 
+
     return (
         <div>
             <div className="AuthModal">
@@ -173,13 +177,13 @@ function AuthenticationModal() {
                             <span>or use your account</span>
 
                             <input type="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
-                            <p className="errorMsg">{emailError}</p>
+                            {/* <p className="errorMsg">{emailError}</p> */}
                             <input type="password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)} />
-                            <p className="errorMessage">{passwordError}</p>
+                            {/* <p className="errorMessage">{passwordError}</p> */}
 
 
 
-                            <a href="#">Forgot your password?</a>
+                            <a href onClick={ForgotPassword}>Forgot your password?</a>
                             {/* <div className="btnContainer"> */}
                             <button onClick={HandleLogin}>Sign In</button>
                             {/* </div> */}
