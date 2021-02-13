@@ -5,6 +5,7 @@ import Footer from '../components/footer'
 import SubCard from '../components/SubscriptionCard'
 import Card from '../components/card'
 import Header from '../components/header'
+import SubCardBG from '../components/SubCard'
 
 // import StageCard from '../components/StageCard'
 // import PricingCard from '../components/PricingCard'
@@ -25,12 +26,13 @@ const PricingPage = () => (
           <br />
 
           <div className="PricingSection">
-            <h2> Pricing</h2>
+            {/* <h2> Pricing</h2> */}
           </div>
           <br />
           <div className="PricingCardSection">
 
-            <SubCard />
+            {/* <SubCard /> */}
+            <SubCardBG />
 
           </div>
 
