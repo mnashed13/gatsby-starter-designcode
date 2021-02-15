@@ -4,8 +4,13 @@ import { Icon, InlineIcon } from '@iconify/react';
 import facebookF from '@iconify/icons-uim/facebook-f';
 import googleIcon from '@iconify/icons-grommet-icons/google';
 import fire from '../firebase.config';
+import firebase from 'firebase'
+import { useHistory } from "react-router-dom";
+
 
 function AuthenticationModal() {
+
+    let history = useHistory();
 
     const [user, setUser] = useState('');
     const [email, setEmail] = useState('');
@@ -13,7 +18,7 @@ function AuthenticationModal() {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [hasAccount, setHasAccount] = useState()
-    // const history = useHistory(); 
+
 
 
     const clearInputs = () => {
@@ -48,7 +53,7 @@ function AuthenticationModal() {
             )
 
         console.log("Login Succssful")
-        // redirectUri = 'http://localhost:8000'
+
 
     };
 
@@ -71,6 +76,7 @@ function AuthenticationModal() {
                 }
             }
             )
+
     };
 
     const handleLogout = () => {
@@ -118,10 +124,30 @@ function AuthenticationModal() {
 
     function GoogleSignIn() {
         console.log("Google Sign In Method start")
+        var provider = new firebase.auth.GoogleAuthProvider();
+        provider.addScope("profile")
+        provider.addScope("email")
+        firebase.auth().signInWithPopup(provider).then(function (result) {
+            var token = result.credential.accessToken;
+            var user = result.user;
+
+            // <Redirect to="/" />;
+        })
     }
 
     function FacebookSignIn() {
         console.log("Facebook SignIn Method Start")
+        // Sign in using a popup.
+        var provider = new firebase.auth.FacebookAuthProvider();
+        provider.addScope('user_birthday');
+        firebase.auth().signInWithPopup(provider).then(function (result) {
+            // This gives you a Facebook Access Token.
+            var token = result.credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            // history.push("/");
+
+        });
     }
 
     function GoogleSignUp() {
@@ -150,8 +176,9 @@ function AuthenticationModal() {
                             <h1>Create Account</h1>
                             <div class="social-container">
                                 {/* Google */}
-                                {/* <a href="#" class="social"><Icon icon={facebookF} style={{ color: '#103a79', fontSize: '24px' }} onClick={FacebookSignUp} /></a>
-                                <a href="#" class="social"><Icon icon={googleIcon} style={{ fontSize: '24px' }} onClick={GoogleSignUp} /> </a> */}
+                                <a href="#" class="social"><Icon icon={facebookF} style={{ color: '#103a79', fontSize: '24px' }} onClick={FacebookSignUp} /></a>
+                                {/* Facebook SignUp */}
+                                <a href="#" class="social"><Icon icon={googleIcon} style={{ fontSize: '24px' }} onClick={GoogleSignUp} /> </a>
 
                             </div>
                             <span>or use your email for registration</span>
@@ -185,7 +212,7 @@ function AuthenticationModal() {
 
                             <a href onClick={ForgotPassword}>Forgot your password?</a>
                             {/* <div className="btnContainer"> */}
-                            <button onClick={HandleLogin}>Sign In</button>
+                            <button onClick={HandleLogin} redirectUri={"/"} >Sign In</button>
                             {/* </div> */}
                         </form>
                     </div>
