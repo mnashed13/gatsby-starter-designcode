@@ -53,6 +53,7 @@ function AuthenticationModal() {
             )
 
         console.log("Login Succssful")
+        window.location.href = ("http://localhost:8000/")
 
 
     };
@@ -131,7 +132,7 @@ function AuthenticationModal() {
             var token = result.credential.accessToken;
             var user = result.user;
 
-            // <Redirect to="/" />;
+            window.location.href = ("http://localhost:8000/")
         })
     }
 
@@ -145,7 +146,7 @@ function AuthenticationModal() {
             var token = result.credential.accessToken;
             // The signed-in user info.
             var user = result.user;
-            // history.push("/");
+            window.location.href = ("http://localhost:8000/")
 
         });
     }
@@ -157,15 +158,6 @@ function AuthenticationModal() {
     function FacebookSignUp() {
         console.log("Facebook Sign Up Method")
     }
-
-
-
-
-
-
-
-
-
 
     return (
         <div>
@@ -179,7 +171,6 @@ function AuthenticationModal() {
                                 <a href="#" class="social"><Icon icon={facebookF} style={{ color: '#103a79', fontSize: '24px' }} onClick={FacebookSignUp} /></a>
                                 {/* Facebook SignUp */}
                                 <a href="#" class="social"><Icon icon={googleIcon} style={{ fontSize: '24px' }} onClick={GoogleSignUp} /> </a>
-
                             </div>
                             <span>or use your email for registration</span>
                             <input type="text" placeholder="Name" />
