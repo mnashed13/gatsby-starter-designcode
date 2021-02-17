@@ -16,14 +16,21 @@ const DocumentSettingPage = () => (
                     <div className="FAHeaderImageSetting">
                         <img src={require('../assets/LogoWhite.png')} />
                         <div className="titleCred">
-                            <h1>Dashboard</h1>
+                            <h1>Account Settings</h1>
                             <h2> Welcome back : Michael Nashed </h2>
                         </div>
+
                     </div>
 
                 </div>
-                <div classname="PersonalDetailsSections">
-                    <h3> Personal Details</h3>
+                <div className="personalDetailsHeader">
+
+                    <h3>Personal Details</h3>
+                </div>
+                <div className="personalDetails">
+                    <a> First Name</a>
+                    <p> Michael</p>
+
                 </div>
 
 
@@ -31,6 +38,7 @@ const DocumentSettingPage = () => (
 
 
             </div>
+
 
         </div>
     </div>
