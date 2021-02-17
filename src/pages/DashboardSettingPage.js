@@ -27,11 +27,26 @@ const DocumentSettingPage = () => (
 
                     <h3>Personal Details</h3>
                 </div>
-                <div className="personalDetails">
-                    <a> First Name</a>
-                    <p> Michael</p>
+                <div className="PersonalInfoRow">
+                    <div className="personalDetails">
+                        <h5> First Name</h5>
+                        <p> Michael</p>
+
+                        <h5> Last Name</h5>
+                        <p> Nashed</p>
+                    </div>
+                    <div className="personalDetails2">
+                        <h5> Email</h5>
+                        <p> mnashed13@gmail.com</p>
+
+                        <h5>Phone</h5>
+                        <p> +614123456789</p>
+                    </div>
+                    <img src="" />
+
 
                 </div>
+
 
 
 
